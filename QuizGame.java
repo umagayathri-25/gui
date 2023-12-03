@@ -73,7 +73,7 @@ public class QuizGame extends JFrame {
         getContentPane().add(headerPanel, BorderLayout.NORTH);
         getContentPane().add(quizPanel, BorderLayout.SOUTH);
         getContentPane().add(centerPanel, BorderLayout.CENTER);
-        getContentPane().add(centerPanel, BorderLayout.CENTER);
+        
         
 
         setVisible(true);
@@ -94,7 +94,7 @@ public class QuizGame extends JFrame {
         if (currentQuestionIndex < questions.length) {
            questionLabel = new JLabel(questions[currentQuestionIndex]);
             questionLabel.setFont(new Font("Arial", Font.BOLD, 18));
-            questionLabel.setOpaque(true);  // Set this to true to enable background color
+            questionLabel.setOpaque(true);  
             questionLabel.setBackground(new Color(204, 153, 255));
             optionARadio = new JRadioButton("A) " + options[currentQuestionIndex][0]);
             optionBRadio = new JRadioButton("B) " + options[currentQuestionIndex][1]);
@@ -108,7 +108,7 @@ public class QuizGame extends JFrame {
             buttonGroup.add(optionBRadio);
             buttonGroup.add(optionCRadio);
             buttonGroup.add(optionDRadio);
-            Font radioButtonFont = new Font("Arial", Font.PLAIN, 14); // Adjust the font size as needed
+            Font radioButtonFont = new Font("Arial", Font.PLAIN, 14); 
             optionARadio.setFont(radioButtonFont);
             optionBRadio.setFont(radioButtonFont);
             optionCRadio.setFont(radioButtonFont);
@@ -159,7 +159,7 @@ public class QuizGame extends JFrame {
         else if (optionBRadio.isSelected()) return 'B';
         else if (optionCRadio.isSelected()) return 'C';
         else if (optionDRadio.isSelected()) return 'D';
-        else return '\0'; // No option selected
+        else return '\0'; 
     }
 
     private void showResult() {
